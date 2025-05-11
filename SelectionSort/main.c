@@ -1,12 +1,10 @@
 #include <stdio.h>
 
 void SelSort(int arr[],int n){ // 정렬할 배열arr과 배열의 크기 n을 매개변수로 넘김
-
     int minIdx;
     int temp;
 
-    for (int i=0; i<n-1; i++){ //for i 0 to n-1
-
+    for (int i=0; i<n-1; i++){ //배열의 총 요소 n개니까 비교는 n-1번만 하면 됨
         minIdx = i;
 
         //for문 j는 최소값 탐색을 위해서 돌림
@@ -15,12 +13,14 @@ void SelSort(int arr[],int n){ // 정렬할 배열arr과 배열의 크기 n을 �
                 minIdx = j; //minIdx를 j로 교환
         }
 
-        temp = arr[i];
-        arr[i] = arr[minIdx];
-        arr[minIdx] = temp;
+        temp = arr[i]; //temp에 교환 당할 가장 앞쪽 요소 arr[i]를 저장함
+        arr[i] = arr[minIdx]; // arr[i]에 내가 찾은 min값을 저장함
+        arr[minIdx] = temp; // 원래 최소값이 있던 자리에 temp값을 넣어 교환 완료
     }
-
 }
+
+
+
 int main()
 {
     int arr[4] = {3, 4, 2, 1};
@@ -34,12 +34,4 @@ int main()
 }
 
 
-void MySelSort (int arr[], int n){
 
-    //최소값을 찾음
-    //찾은걸 교환함
-
-    int min;
-
-    for (int i=0; i<n-1; i++) //n-1번 반복할거임
-}
