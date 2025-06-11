@@ -28,7 +28,7 @@ int main(void){
         heap[0] = heap[i]; //마지막 idx값이랑
         heap[i] = temp;    //바꿔주는 작업
         int root = 0;
-        int c = 1;
+         int c;
 
         do {
             c = 2*root + 1;
